@@ -1,10 +1,16 @@
 <?php 
 $db = new PDO("mysql:dbname=animals;host:localhost","root","");
-if($db)
+$ans = $_POST['option'];
+$que = $_POST['q'];
+$option = $db->prepare("SELECT * FROM quis WHERE question = :ask");
+$option->execute([':ask'=>$que]);
+$fe = $option->fetch(PDO::FETCH_ASSOC);
+if($fe['key']==$ans)
 {
-	echo "connected";
+	echo "correct answer";
 }
 else
 {
-	echo "oops";
+	echo "wrong answer";
 }
+?>
