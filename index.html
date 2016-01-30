@@ -1,10 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link src = "./" rel="stylesheet" type="text/css">
+	<link href = "bower_components\bootstrap\dist\css\bootstrap.css" rel="stylesheet">
 	<title>Quiz app</title>
 </head>
 <body>
-
+<form action="dbconnect.php" method="post">
+<lable value = "1" >1.which animal have more hair?</lable><br>
+<input type="radio" name = "option" value = "a" class="">tiger
+<input type="radio" name = "option" value = "b" class="">lion
+<input type="radio" name= "option" value = "c" class="">lepod
+<input type="radio" name= "option" value = "d" class="">cheta<br>
+<input type="submit" class="btn btn-default" value = "send" >
+</form>
 </body>
 </html>
